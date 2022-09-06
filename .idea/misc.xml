@@ -3,6 +3,14 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Android/SMS/app/src/main/res/layout/activity_notice.xml" value="0.25416666666666665" />
+        <entry key="..\:/Android/SMS/app/src/main/res/layout/activity_result.xml" value="0.25416666666666665" />
+        <entry key="..\:/Android/SMS/app/src/main/res/layout/activity_student_dashboard.xml" value="0.21944444444444444" />
+        <entry key="..\:/Android/SMS/app/src/main/res/layout/fragment_all_notice.xml" value="0.25416666666666665" />
+        <entry key="..\:/Android/SMS/app/src/main/res/layout/fragment_combine_result.xml" value="0.25416666666666665" />
+        <entry key="..\:/Android/SMS/app/src/main/res/layout/fragment_first_term.xml" value="0.25416666666666665" />
+        <entry key="..\:/Android/SMS/app/src/main/res/layout/fragment_new_notice.xml" value="0.25416666666666665" />
+        <entry key="..\:/Android/SMS/app/src/main/res/layout/fragment_second_term.xml" value="0.25416666666666665" />
         <entry key="..\:/SMS/app/src/main/res/drawable/edit_text_background.xml" value="0.1695" />
         <entry key="..\:/SMS/app/src/main/res/drawable/login_top_background.xml" value="0.14" />
         <entry key="..\:/SMS/app/src/main/res/layout/activity_login.xml" value="0.15" />
