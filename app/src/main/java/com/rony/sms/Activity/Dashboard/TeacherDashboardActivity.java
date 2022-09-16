@@ -4,13 +4,18 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
-import com.rony.sms.R;
+import com.rony.sms.databinding.ActivityTeacherDashboardBinding;
 
 public class TeacherDashboardActivity extends AppCompatActivity {
+
+    ActivityTeacherDashboardBinding binding;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_teacher_dashboard);
+
+        binding = ActivityTeacherDashboardBinding.inflate(getLayoutInflater());
+        setContentView(binding.getRoot());
+
     }
 }

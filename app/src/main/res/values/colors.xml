@@ -11,4 +11,9 @@
     <color name="green">#10F099</color>
     <color name="background">#E4EBF5</color>
 
+    <color name="lemonYellow">#FFF455</color>
+    <color name="deepKoamaru">#303F5D</color>
+    <color name="BrightGray">#EEEEEE</color>
+    <color name="cultured">#F6F6F6</color>
+
 </resources>
