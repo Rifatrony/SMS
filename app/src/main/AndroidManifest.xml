@@ -14,6 +14,13 @@
         android:theme="@style/Theme.SMS"
         tools:targetApi="31">
         <activity
+            android:name=".Activity.AcademicCalenderActivity"
+            android:exported="false">
+        </activity>
+        <activity
+            android:name=".Activity.RoutineActivity"
+            android:exported="false" />
+        <activity
             android:name=".Activity.NoticeActivity"
             android:exported="false" />
         <activity

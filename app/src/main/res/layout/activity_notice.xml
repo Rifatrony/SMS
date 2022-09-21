@@ -59,10 +59,11 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:tabBackground="@color/green"
+            app:tabBackground="@color/deepKoamaru"
             app:tabIndicatorColor="@color/white"
-            app:tabSelectedTextColor="#FFEB3B"
-            app:tabTextColor="@color/white">
+            app:tabSelectedTextColor="@color/white"
+            app:tabTextColor="#C0C0C0"
+            app:tabTextAppearance="@style/MineCustomTabText">
 
             <com.google.android.material.tabs.TabItem
                 android:layout_width="match_parent"

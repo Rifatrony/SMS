@@ -17,6 +17,7 @@ import android.widget.Toast;
 import com.google.android.material.navigation.NavigationView;
 import com.rony.sms.Activity.NoticeActivity;
 import com.rony.sms.Activity.ResultActivity;
+import com.rony.sms.Activity.RoutineActivity;
 import com.rony.sms.R;
 import com.rony.sms.databinding.ActivityStudentDashboardBinding;
 
@@ -34,12 +35,13 @@ public class StudentDashboardActivity extends AppCompatActivity implements View.
         super.onCreate(savedInstanceState);
 
         binding = ActivityStudentDashboardBinding.inflate(getLayoutInflater());
-        View view = binding.getRoot();
-        setContentView(view);
 
+        setContentView(binding.getRoot());
 
         initialization();
         setListener();
+
+        binding.accountCardView.setBackgroundResource(R.drawable.gradiant_background_1);
 
         imageMenu.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -55,7 +57,6 @@ public class StudentDashboardActivity extends AppCompatActivity implements View.
         });*/
 
         navigationView.setItemIconTintList(null);
-
 
         navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
             @SuppressLint("NonConstantResourceId")
@@ -92,13 +93,11 @@ public class StudentDashboardActivity extends AppCompatActivity implements View.
         imageMenu = findViewById(R.id.imageMenu);
         navigationView = findViewById(R.id.navigationView);
 
-        resultCardView = findViewById(R.id.resultCardView);
-        noticeCardView = findViewById(R.id.noticeCardView);
     }
 
     private void setListener(){
-        resultCardView.setOnClickListener(this);
-        noticeCardView.setOnClickListener(this);
+        binding.resultCardView.setOnClickListener(this);
+        binding.noticeCardView.setOnClickListener(this);
         binding.routineCardView.setOnClickListener(this);
         binding.accountCardView.setOnClickListener(this);
         binding.calenderCardView.setOnClickListener(this);
@@ -110,7 +109,7 @@ public class StudentDashboardActivity extends AppCompatActivity implements View.
     public void onClick(View view) {
         switch (view.getId()){
             case R.id.routineCardView:
-                Toast.makeText(this, "Clicked", Toast.LENGTH_SHORT).show();
+                startActivity(new Intent(getApplicationContext(), RoutineActivity.class));
                 break;
 
             case R.id.resultCardView:
