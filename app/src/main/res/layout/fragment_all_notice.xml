@@ -6,13 +6,11 @@
     android:gravity="center"
     tools:context=".Fragment.AllNoticeFragment">
 
-    <TextView
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/noticeRecyclerView"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="All Notice"
-        android:gravity="center"
-        android:textSize="30sp"
-        android:textColor="@color/black"
+        android:layout_height="match_parent"
+
         />
 
 </LinearLayout>

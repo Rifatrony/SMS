@@ -41,7 +41,7 @@ public class StudentDashboardActivity extends AppCompatActivity implements View.
         initialization();
         setListener();
 
-        binding.accountCardView.setBackgroundResource(R.drawable.gradiant_background_1);
+        //binding.accountCardView.setBackgroundResource(R.drawable.gradiant_background_1);
 
         imageMenu.setOnClickListener(new View.OnClickListener() {
             @Override

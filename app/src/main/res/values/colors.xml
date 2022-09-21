@@ -15,5 +15,16 @@
     <color name="deepKoamaru">#303F5D</color>
     <color name="BrightGray">#EEEEEE</color>
     <color name="cultured">#F6F6F6</color>
+    <color name="salmon">#FA8072</color>
+    <color name="blue">#0000FF</color>
+    <color name="fuchsia">#FF00FF</color>
+    <color name="purple">#800080</color>
+    <color name="card2">#7b7cf8</color>
+    <color name="card1">#ff5e81</color>
+    <color name="card3">#008080</color>
+    <color name="card4">#2C882F</color>
+    <color name="card7">#83A304</color>
+    <color name="card5">#855953</color>
+    <color name="card6">#cb6d51</color>
 
 </resources>
