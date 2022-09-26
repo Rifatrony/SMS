@@ -1,50 +1,68 @@
 package com.rony.sms.Adapter;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
+import android.os.Build;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.RequiresApi;
 import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.rony.sms.Model.NoticeModel;
+import com.rony.sms.Model.CostModel;
 import com.rony.sms.R;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
-public class NoticeAdapter extends RecyclerView.Adapter<NoticeAdapter.NoticeViewHolder> {
+public class CostAdapter extends RecyclerView.Adapter<CostAdapter.CostViewHolder> {
 
     Context context;
-    List<NoticeModel> noticeModelList;
+    List<CostModel> costModelList;
 
-    public NoticeAdapter(Context context, List<NoticeModel> noticeModelList) {
+    String fullDate;
+    String date, month, year;
+
+    public CostAdapter(Context context, List<CostModel> costModelList) {
         this.context = context;
-        this.noticeModelList = noticeModelList;
+        this.costModelList = costModelList;
     }
 
     @NonNull
     @Override
-    public NoticeViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+    public CostViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(context).inflate(R.layout.notice_layout, parent, false);
-        return new NoticeViewHolder(view);
+        return new CostViewHolder(view);
     }
 
+    @RequiresApi(api = Build.VERSION_CODES.M)
+    @SuppressLint("SetTextI18n")
     @Override
-    public void onBindViewHolder(@NonNull NoticeViewHolder holder, int position) {
-        NoticeModel model = noticeModelList.get(position);
-        holder.noticeTitleTextView.setText(model.getTitle());
-        holder.dateTextView.setText(model.getDate());
-        holder.monthTextView.setText(model.getMonth());
-        holder.noticeDateTextView.setText(model.getFullDate());
-        holder.noticeDescriptionTextView.setText(model.getDescription());
+    public void onBindViewHolder(@NonNull CostViewHolder holder, int position) {
+        CostModel model = costModelList.get(position);
+        holder.noticeTitleTextView.setText(model.reason);
+        holder.noticeDateTextView.setText(model.today);
+        holder.noticeDescriptionTextView.setText(String.valueOf(model.amount));
 
-        holder.cardView.setCardBackgroundColor(holder.view.getResources().getColor(getRandomColor(), null));
+        fullDate = model.getDate().toString();
+
+        if (fullDate.isEmpty()){
+            date = fullDate.substring(8,10);
+            month = fullDate.substring(4,7);
+            year = fullDate.substring(30,34);
+            System.out.println("Year is "+year);
+            System.out.println("Month is "+month);
+            System.out.println("Date is "+date);
+            holder.dateTextView.setText(date +" "+ month);
+            holder.monthTextView.setText(year);
+        }
+
+        holder.cardView.setCardBackgroundColor(holder.itemView.getResources().getColor(getRandomColor(), null));
 
     }
 
@@ -68,26 +86,24 @@ public class NoticeAdapter extends RecyclerView.Adapter<NoticeAdapter.NoticeView
 
     @Override
     public int getItemCount() {
-        return noticeModelList.size();
+        return costModelList.size();
     }
 
-    public class NoticeViewHolder extends RecyclerView.ViewHolder {
+    public class CostViewHolder extends RecyclerView.ViewHolder {
 
         TextView noticeTitleTextView, noticeDateTextView, noticeDescriptionTextView, dateTextView, monthTextView;
         CardView cardView;
-        View view;
 
-        public NoticeViewHolder(@NonNull View itemView) {
+        public CostViewHolder(@NonNull View itemView) {
             super(itemView);
 
             cardView = itemView.findViewById(R.id.cardView);
+
             noticeTitleTextView = itemView.findViewById(R.id.noticeTitleTextView);
             noticeDateTextView = itemView.findViewById(R.id.noticeDateTextView);
             noticeDescriptionTextView = itemView.findViewById(R.id.noticeDescriptionTextView);
             dateTextView = itemView.findViewById(R.id.dateTextView);
             monthTextView = itemView.findViewById(R.id.monthTextView);
-
-            view =itemView;
 
         }
     }

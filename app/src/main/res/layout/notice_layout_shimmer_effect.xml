@@ -23,6 +23,7 @@
         android:layout_height="0dp"
         android:background="@drawable/tv_show_background"
         android:paddingBottom="20dp"
+        android:layout_marginTop="-5dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toTopOf="@id/noticeTitleTextView"
         />
@@ -34,7 +35,7 @@
         android:layout_marginStart="10dp"
         app:cardCornerRadius="10dp"
         android:alpha="0.8"
-        app:cardBackgroundColor="@color/card2"
+        app:cardBackgroundColor="@color/shimmer_color"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         >
@@ -47,22 +48,18 @@
             >
 
             <TextView
-                android:id="@+id/dateTextView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="26"
-                android:textSize="18sp"
+                android:textSize="24sp"
                 android:textStyle="bold"
                 android:textColor="@color/white"
                 android:layout_gravity="center_horizontal"
                 />
 
             <TextView
-                android:id="@+id/monthTextView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Sep"
-                android:textSize="24sp"
+                android:textSize="30sp"
                 android:textStyle="bold"
                 android:textColor="@color/white"
                 android:layout_gravity="center_horizontal"
@@ -88,14 +85,14 @@
         android:id="@+id/noticeTitleTextView"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="Notice Title"
+        android:background="@drawable/shimmer_background"
         android:textColor="@color/deepKoamaru"
         android:textStyle="bold"
         android:textSize="16sp"
         android:layout_marginStart="10dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="10dp"
         android:layout_marginEnd="10dp"
-        android:paddingTop="15dp"
+        android:paddingTop="8dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@id/cardView"
         app:layout_constraintTop_toTopOf="@id/cardView"
@@ -107,10 +104,12 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:ellipsize="end"
-        android:text="12/1/2022"
+        android:background="@drawable/shimmer_background"
+        android:layout_marginTop="5dp"
         android:textColor="@color/black"
         android:textSize="13sp"
         android:textStyle="bold"
+        android:paddingTop="8dp"
         app:layout_constraintEnd_toEndOf="@id/noticeTitleTextView"
         app:layout_constraintStart_toStartOf="@id/noticeTitleTextView"
         app:layout_constraintTop_toBottomOf="@id/noticeTitleTextView"
@@ -120,13 +119,15 @@
         android:id="@+id/noticeDescriptionTextView"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:background="@drawable/shimmer_background"
         android:ellipsize="end"
-        android:text="Description"
         android:maxLines="2"
+        android:paddingTop="8dp"
         android:textColor="@color/black"
         app:layout_constraintEnd_toEndOf="@id/noticeTitleTextView"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@id/noticeTitleTextView"
-        app:layout_constraintTop_toBottomOf="@id/noticeDateTextView"
-        />
+        app:layout_constraintTop_toBottomOf="@id/noticeDateTextView" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
